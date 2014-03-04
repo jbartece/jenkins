@@ -102,8 +102,8 @@ THE SOFTWARE.
         not actually used by test but used by dependency plugin to include it inside the war.
       -->
       <groupId>org.jenkins-ci</groupId>
-      <artifactId>winstone</artifactId>
-      <version>2.0</version>
+      <artifactId>undertow4jenkins</artifactId>
+      <version>0.1-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -256,9 +256,9 @@ THE SOFTWARE.
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.jenkins-ci</groupId>
-                  <artifactId>winstone</artifactId>
+                  <artifactId>undertow4jenkins</artifactId>
                   <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
-                  <destFileName>winstone.jar</destFileName>
+                  <destFileName>undertow4jenkins.jar</destFileName>
                 </artifactItem>
                 <!-- bundled plugins -->
                 <artifactItem>
@@ -387,8 +387,8 @@ THE SOFTWARE.
           <attach>true</attach>
           <inlineScript>
             filter {
-                // add Winstone since we are bundling it.
-                def d = project.dependencies.find { it.artifactId=="winstone" };
+                // add Undertow4Jenkins since we are bundling it.
+                def d = project.dependencies.find { it.artifactId=="undertow4jenkins" };
                 def a = mojo.artifactFactory.createProjectArtifact(d.groupId,d.artifactId,d.version);
                 def p = mojo.projectBuilder.buildFromRepository(a, project.getRemoteArtifactRepositories(), mojo.localRepository)
                 models.put(a,p);
