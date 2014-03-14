@@ -104,6 +104,7 @@ THE SOFTWARE.
       <groupId>org.jenkins-ci</groupId>
       <artifactId>undertow4jenkins</artifactId>
       <version>0.1-SNAPSHOT</version>
+      <classifier>jar-with-dependencies</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -257,6 +258,7 @@ THE SOFTWARE.
                 <artifactItem>
                   <groupId>org.jenkins-ci</groupId>
                   <artifactId>undertow4jenkins</artifactId>
+                  <classifier>jar-with-dependencies</classifier>
                   <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
                   <destFileName>undertow4jenkins.jar</destFileName>
                 </artifactItem>
